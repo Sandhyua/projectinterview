@@ -1,0 +1,12 @@
+<!-- deposit.html -->
+{% extends 'bank/base.html' %}
+{% block content %}
+<div class="container mt-4">
+    <h2>Deposit Money</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">Deposit</button>
+    </form>
+</div>
+{% endblock %}

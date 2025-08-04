@@ -1,0 +1,42 @@
+<!-- dashboard.html -->
+<!-- bank/templates/bank/dashboard.html -->
+{% extends 'bank/base.html' %}
+
+{% block content %}
+    <div class="text-center">
+        <h2>Welcome to Digital Bank Dashboard</h2>
+        <p class="lead">Here you can manage your account activities securely and easily.</p>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card text-white bg-success mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Deposit</h5>
+                    <p class="card-text">Add money to your account.</p>
+                    <a href="{% url 'deposit' %}" class="btn btn-light">Deposit</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card text-white bg-danger mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Withdraw</h5>
+                    <p class="card-text">Take out money from your account.</p>
+                    <a href="{% url 'withdraw' %}" class="btn btn-light">Withdraw</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card text-white bg-info mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Transactions</h5>
+                    <p class="card-text">View your transaction history.</p>
+                    <a href="{% url 'transactions' %}" class="btn btn-light">History</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

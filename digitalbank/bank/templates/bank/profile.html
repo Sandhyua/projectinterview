@@ -1,0 +1,13 @@
+<!-- templates/bank/profile.html -->
+{% extends 'bank/base.html' %}
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-primary">Welcome, {{ user.username }}</h2>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>Current Balance:</strong> ₹{{ balance }}</p>
+    <!-- <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a> -->
+     
+    <a href="{% url 'update_profile' %}" class="btn btn-primary">Edit Profile</a>
+
+</div>
+{% endblock %}
